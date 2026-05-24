@@ -11,7 +11,7 @@
     --bg-dark-secondary: #0E0E0E;
     --bg-dark-card: rgba(18, 18, 18, 0.5);
     --border-dark-glass: rgba(212, 175, 55, 0.15);
-    
+
     --bg-light-base: #F8F9FA;
     --bg-light-secondary: #FFFFFF;
     --border-light-soft: rgba(0, 0, 0, 0.05);
@@ -23,7 +23,7 @@
     --gold-glow: rgba(212, 175, 55, 0.25);
     --gold-gradient: linear-gradient(135deg, #F3D082 0%, #D4AF37 50%, #9A7B2C 100%);
     --gold-text-gradient: linear-gradient(to right, #F3D082, #D4AF37, #9A7B2C);
-    
+
     /* Typography Colors */
     --text-white: #FFFFFF;
     --text-cream: #F5F5F5;
@@ -40,7 +40,7 @@
     --duration-slow: 0.6s;
     --duration-medium: 0.4s;
     --duration-fast: 0.25s;
-    
+
     --shadow-gold-soft: 0 8px 32px 0 rgba(212, 175, 55, 0.1);
     --shadow-gold-hard: 0 12px 40px 0 rgba(212, 175, 55, 0.25);
     --shadow-dark-premium: 0 20px 50px rgba(0, 0, 0, 0.8);
@@ -75,19 +75,27 @@ body {
 ::-webkit-scrollbar {
     width: 8px;
 }
+
 ::-webkit-scrollbar-track {
     background: var(--bg-dark-base);
 }
+
 ::-webkit-scrollbar-thumb {
     background: var(--gold-dark);
     border-radius: 4px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
     background: var(--gold-primary);
 }
 
 /* Typography Overrides */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: var(--font-heading);
     letter-spacing: 0.05em;
     font-weight: 700;
@@ -144,7 +152,7 @@ a {
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 8rem 0 6rem 0;
+    padding: 2rem 0 3rem 0;
     z-index: 2;
     overflow: hidden;
 }
@@ -174,7 +182,7 @@ a {
     height: 100%;
     z-index: -1;
     background: radial-gradient(circle at center, transparent 20%, rgba(7, 7, 7, 0.75) 70%, var(--bg-dark-base) 100%),
-                linear-gradient(to bottom, rgba(7, 7, 7, 0.4) 0%, transparent 40%, var(--bg-dark-base) 95%);
+        linear-gradient(to bottom, rgba(7, 7, 7, 0.4) 0%, transparent 40%, var(--bg-dark-base) 95%);
 }
 
 .hero-content {
@@ -190,7 +198,7 @@ a {
     flex-direction: column;
     align-items: center;
     margin-top: 2.8rem;
-    margin-bottom: 2.8rem;
+    margin-bottom: 0rem;
 }
 
 .headline-block {
@@ -214,7 +222,8 @@ a {
     letter-spacing: 0.28em;
     line-height: 1;
     margin-bottom: 0.6rem;
-    text-indent: 0.28em; /* Shift text slightly left to perfectly center with wide letter-spacing! */
+    text-indent: 0.28em;
+    /* Shift text slightly left to perfectly center with wide letter-spacing! */
 }
 
 .brand-subtitle-container {
@@ -232,7 +241,8 @@ a {
     letter-spacing: 0.48em;
     padding: 0 1rem;
     line-height: 1;
-    text-indent: 0.48em; /* Perfectly center with wide tracking! */
+    text-indent: 0.48em;
+    /* Perfectly center with wide tracking! */
 }
 
 .decor-line {
@@ -334,7 +344,7 @@ a {
     opacity: 0.9;
     letter-spacing: 0.03em;
     line-height: 1.8;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 /* --------------------------------------------------------------------------
@@ -603,7 +613,8 @@ a {
     gap: 4rem;
 }
 
-.launch-left, .launch-right {
+.launch-left,
+.launch-right {
     flex: 1;
 }
 
@@ -640,7 +651,7 @@ a {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to right, rgba(0,0,0,0.02), transparent 40%, rgba(0,0,0,0.02) 100%);
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.02), transparent 40%, rgba(0, 0, 0, 0.02) 100%);
     pointer-events: none;
 }
 
@@ -721,9 +732,11 @@ a {
         transform: scale(0.5);
         opacity: 0;
     }
+
     30% {
         opacity: 0.8;
     }
+
     100% {
         transform: scale(1.6);
         opacity: 0;
@@ -836,7 +849,7 @@ a {
     opacity: 0;
     visibility: hidden;
     transition: opacity var(--duration-medium) var(--transition-premium),
-                visibility var(--duration-medium) var(--transition-premium);
+        visibility var(--duration-medium) var(--transition-premium);
 }
 
 .modal-overlay-backdrop.active {
@@ -933,7 +946,7 @@ a {
     gap: 1.5rem;
 }
 
-.input-floating-group input, 
+.input-floating-group input,
 .input-floating-group textarea {
     width: 100%;
     padding: 0.9rem 0;
@@ -975,23 +988,23 @@ a {
 }
 
 /* Floating behavior when active/focused */
-.input-floating-group input:focus ~ label,
-.input-floating-group input:not(:placeholder-shown) ~ label,
-.input-floating-group textarea:focus ~ label,
-.input-floating-group textarea:not(:placeholder-shown) ~ label {
+.input-floating-group input:focus~label,
+.input-floating-group input:not(:placeholder-shown)~label,
+.input-floating-group textarea:focus~label,
+.input-floating-group textarea:not(:placeholder-shown)~label {
     top: -1.1rem;
     font-size: 0.78rem;
     color: var(--gold-light);
     letter-spacing: 0.05em;
 }
 
-.input-floating-group input:focus ~ .input-border,
-.input-floating-group textarea:focus ~ .input-border {
+.input-floating-group input:focus~.input-border,
+.input-floating-group textarea:focus~.input-border {
     width: 100%;
     left: 0;
 }
 
-.input-floating-group input:focus, 
+.input-floating-group input:focus,
 .input-floating-group textarea:focus {
     border-bottom-color: transparent;
 }
@@ -1103,9 +1116,12 @@ a {
 }
 
 @keyframes scaleSuccess {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: none;
     }
+
     50% {
         transform: scale3d(1.1, 1.1, 1);
     }
@@ -1124,6 +1140,7 @@ a {
     0% {
         transform: scale(1.03) translate(0, 0);
     }
+
     100% {
         transform: scale(1.10) translate(-0.5%, -0.5%);
     }
@@ -1138,6 +1155,7 @@ a {
     html {
         font-size: 18px;
     }
+
     .container {
         max-width: 1400px;
     }
@@ -1148,9 +1166,11 @@ a {
     .coming-soon-title {
         font-size: 3rem;
     }
+
     .features-grid {
         padding: 2.5rem 1.8rem;
     }
+
     .footer-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
@@ -1175,6 +1195,7 @@ a {
     .brand-title {
         font-size: 1.8rem;
     }
+
     .brand-subtitle {
         font-size: 0.85rem;
         letter-spacing: 0.35em;
@@ -1275,19 +1296,19 @@ a {
         grid-template-columns: 1fr;
         gap: 1.2rem;
     }
-    
+
     .footer-col {
         padding: 1rem;
     }
-    
+
     .modal-dialog-box {
         padding: 2rem 1.2rem;
     }
-    
+
     .modal-headline {
         font-size: 1.5rem;
     }
-    
+
     .modal-subhead {
         margin-bottom: 2rem;
     }
@@ -1430,10 +1451,114 @@ a {
     text-align: center;
 }
 
-.preloader-logo {
-    margin-bottom: 1.5rem;
-    filter: drop-shadow(0 4px 15px rgba(212, 175, 55, 0.25));
-    animation: pulseLogo 2s infinite ease-in-out;
+/* Atomic Orbit System styles */
+.atom-container {
+    width: 140px;
+    height: 140px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    perspective: 800px;
+}
+
+.atom-nucleus {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: rgba(7, 7, 7, 0.95);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    box-shadow: 0 0 25px rgba(212, 175, 55, 0.2);
+    position: relative;
+    animation: nucleusGlow 3s infinite alternate ease-in-out;
+}
+
+/* Concentric staggered quantum energy waves */
+.atom-nucleus::before,
+.atom-nucleus::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    border: 1px solid var(--gold-primary);
+    box-shadow: 0 0 15px var(--gold-glow);
+    pointer-events: none;
+    z-index: -1;
+    transform: scale(1);
+    opacity: 0;
+}
+
+.atom-nucleus::before {
+    animation: quantumWave 2.4s infinite cubic-bezier(0.1, 0.8, 0.3, 1);
+}
+
+.atom-nucleus::after {
+    animation: quantumWave 2.4s infinite cubic-bezier(0.1, 0.8, 0.3, 1);
+    animation-delay: 1.2s;
+}
+
+.atom-nucleus svg {
+    transform: scale(0.8);
+    filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.35));
+}
+
+.atom-orbit {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 1.2px solid rgba(212, 175, 55, 0.08);
+    border-radius: 50%;
+    transform-style: preserve-3d;
+}
+
+/* Three 3D Orbits at angled axes with active sways */
+.orbit-1 {
+    transform: rotateX(70deg) rotateY(15deg);
+    animation: orbitSway1 12s infinite alternate ease-in-out;
+}
+
+.orbit-2 {
+    transform: rotateX(70deg) rotateY(55deg) rotateZ(120deg);
+    animation: orbitSway2 15s infinite alternate ease-in-out;
+}
+
+.orbit-3 {
+    transform: rotateX(70deg) rotateY(-55deg) rotateZ(240deg);
+    animation: orbitSway3 18s infinite alternate ease-in-out;
+}
+
+/* The Electron particles */
+.atom-electron {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 6px;
+    height: 6px;
+    background-color: var(--gold-light);
+    border-radius: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 12px 3px var(--gold-primary), 0 0 20px 6px var(--gold-light);
+}
+
+/* Animate electrons spinning infinitely + flaring in energy scale */
+.orbit-1 .atom-electron {
+    animation: spinElectron1 3s infinite linear, electronGlow 1.5s infinite alternate ease-in-out;
+}
+
+.orbit-2 .atom-electron {
+    animation: spinElectron2 3.5s infinite linear, electronGlow 1.8s infinite alternate ease-in-out;
+}
+
+.orbit-3 .atom-electron {
+    animation: spinElectron3 2.7s infinite linear, electronGlow 1.2s infinite alternate ease-in-out;
 }
 
 .preloader-text-wrapper {
@@ -1480,14 +1605,102 @@ a {
 }
 
 /* Animations for Preloader */
-@keyframes pulseLogo {
-    0%, 100% {
-        transform: scale(1);
-        filter: drop-shadow(0 4px 15px rgba(212, 175, 55, 0.25));
+@keyframes spinElectron1 {
+    0% {
+        transform: rotateZ(0deg) translateX(70px) rotateZ(0deg);
     }
-    50% {
-        transform: scale(1.05);
-        filter: drop-shadow(0 6px 25px rgba(212, 175, 55, 0.45));
+
+    100% {
+        transform: rotateZ(360deg) translateX(70px) rotateZ(-360deg);
+    }
+}
+
+@keyframes spinElectron2 {
+    0% {
+        transform: rotateZ(0deg) translateX(70px) rotateZ(0deg);
+    }
+
+    100% {
+        transform: rotateZ(360deg) translateX(70px) rotateZ(-360deg);
+    }
+}
+
+@keyframes spinElectron3 {
+    0% {
+        transform: rotateZ(0deg) translateX(70px) rotateZ(0deg);
+    }
+
+    100% {
+        transform: rotateZ(360deg) translateX(70px) rotateZ(-360deg);
+    }
+}
+
+@keyframes nucleusGlow {
+    0% {
+        box-shadow: 0 0 15px rgba(212, 175, 55, 0.15), inset 0 0 10px rgba(212, 175, 55, 0.05);
+        border-color: rgba(212, 175, 55, 0.1);
+    }
+
+    100% {
+        box-shadow: 0 0 35px 5px rgba(212, 175, 55, 0.35), inset 0 0 15px rgba(212, 175, 55, 0.15);
+        border-color: rgba(212, 175, 55, 0.35);
+    }
+}
+
+/* Quantum engine radiating wave shockwaves */
+@keyframes quantumWave {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: scale(2.2);
+        opacity: 0;
+    }
+}
+
+/* Electron flaring glow energy pulsation */
+@keyframes electronGlow {
+    0% {
+        transform: translateX(-50%) scale(0.85);
+        box-shadow: 0 0 10px 2px var(--gold-primary), 0 0 16px 4px var(--gold-light);
+    }
+
+    100% {
+        transform: translateX(-50%) scale(1.45);
+        box-shadow: 0 0 24px 6px var(--gold-primary), 0 0 38px 12px var(--gold-light), 0 0 55px 18px rgba(255, 255, 255, 0.35);
+    }
+}
+
+/* 3D Orbit Sway wobbles */
+@keyframes orbitSway1 {
+    0% {
+        transform: rotateX(65deg) rotateY(10deg) rotateZ(0deg);
+    }
+
+    100% {
+        transform: rotateX(75deg) rotateY(20deg) rotateZ(30deg);
+    }
+}
+
+@keyframes orbitSway2 {
+    0% {
+        transform: rotateX(65deg) rotateY(50deg) rotateZ(105deg);
+    }
+
+    100% {
+        transform: rotateX(75deg) rotateY(60deg) rotateZ(135deg);
+    }
+}
+
+@keyframes orbitSway3 {
+    0% {
+        transform: rotateX(65deg) rotateY(-50deg) rotateZ(225deg);
+    }
+
+    100% {
+        transform: rotateX(75deg) rotateY(-60deg) rotateZ(255deg);
     }
 }
 
@@ -1495,6 +1708,7 @@ a {
     0% {
         width: 0;
     }
+
     100% {
         width: 100%;
     }
@@ -1506,6 +1720,7 @@ a {
         transform: translateY(0);
         box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
     }
+
     100% {
         transform: translateY(-12px);
         box-shadow: 0 28px 60px rgba(0, 0, 0, 0.12);
@@ -1519,6 +1734,7 @@ a {
         filter: brightness(0.85);
         box-shadow: 0 0 12px 2px var(--gold-light), 0 0 22px 4px var(--gold-primary);
     }
+
     100% {
         transform: translate(-50%, -50%) scale(1.3);
         filter: brightness(1.2);
@@ -1531,13 +1747,12 @@ a {
     0% {
         background-position: 0% 0%;
     }
+
     50% {
         background-position: 100% 100%;
     }
+
     100% {
         background-position: 0% 0%;
     }
 }
-
-
-
