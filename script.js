@@ -26,11 +26,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Exit preloader when full assets load or after a controlled fallback timeout
     window.addEventListener('load', () => {
-        setTimeout(exitPreloader, 1500); // Allow preloader bar animation to complete smoothly
+        setTimeout(exitPreloader, 2500); // Allow full collapsing wide-to-shrink atomic animation to settle
     });
 
-    // Fallback safety timeout (3s maximum preloader time)
-    setTimeout(exitPreloader, 3000);
+    // Fallback safety timeout (4s maximum preloader time)
+    setTimeout(exitPreloader, 4000);
 
     /* ==========================================================================
        1. INTERACTIVE CURSOR SPOTLIGHT GLOW
@@ -129,9 +129,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Event Listeners for Open/Close
-    openModalBtn.addEventListener('click', openModal);
-    closeModalBtn.addEventListener('click', closeModal);
-    closeSuccessBtn.addEventListener('click', closeModal);
+    if (openModalBtn) {
+        openModalBtn.addEventListener('click', openModal);
+    }
+    if (closeModalBtn) {
+        closeModalBtn.addEventListener('click', closeModal);
+    }
+    if (closeSuccessBtn) {
+        closeSuccessBtn.addEventListener('click', closeModal);
+    }
 
     // Close modal by clicking the background overlay
     modalOverlay.addEventListener('click', (e) => {
